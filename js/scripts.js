@@ -42,6 +42,7 @@ const displayBooks = (result, books) => {
         let authorName = book.author_name;
         let publisher = book.publisher;
         let fistPublishYear = book.first_publish_year;
+        // undefined error handle 
         if (authorName === undefined) {
             authorName = ['NA'];
         }
@@ -60,12 +61,11 @@ const displayBooks = (result, books) => {
                         <p class="card-text"><span class="text-danger fw-bold">Aurthor</span> : ${authorName[0]}</p>
                         <p class="card-text"><span class="text-danger fw-bold">Pulisher</span> : ${publisher[0]}</p>
                     </div>
-                    <div class="card-footer">
-                    <small class="text-muted"><span class="fw-lighter fst-italic">First Publish year</span> : '${fistPublishYear}'</small>
-                     </div>
+                        <div class="card-footer">
+                        <small class="text-muted"><span class="fw-lighter fst-italic">First Publish year</span> : '${fistPublishYear}'</small>
+                    </div>
               </div>    
          `;
         displayOutput.appendChild(div);
     });
-
 }
