@@ -31,7 +31,7 @@ const displayBooks = (result, books) => {
     // search result 
     else {
         searchResult.innerHTML = `
-                <p> "showing <u><i>${books.length}</i></u> of <u><i>${result} </i></u>  results of '${searchText}' "</p>
+                <p> 'showing <u><i>${books.length}</i></u> of <u><i>${result} </i></u>  results'</p>
     `;
     }
     // loop 
