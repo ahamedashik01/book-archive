@@ -31,12 +31,11 @@ const displayBooks = (result, books) => {
     // search result 
     else {
         searchResult.innerHTML = `
-                <p> 'showing <u><i>${books.length}</i></u> of <u><i>${result} </i></u>  results'</p>
+                <p> "showing <u><i>${books.length}</i></u> of <u><i>${result} </i></u>  results of '${searchText}' "</p>
     `;
     }
     // loop 
     books.forEach(book => {
-        console.log(book);
         const url = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
         const div = document.createElement('div');
         let authorName = book.author_name;
